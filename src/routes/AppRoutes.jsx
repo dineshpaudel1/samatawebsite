@@ -10,7 +10,7 @@ import Contact from '../pages/Contact'
 function AppRoutes() {
   return (
     <Routes>
-      <Route path="/samatawebsite/" element={<Home />} />
+      <Route path="/" element={<Home />} />
       <Route path="about" element={<About />} />
       <Route path="admissions" element={<Admission />} />
       <Route path="programs" element={<Program />} />
