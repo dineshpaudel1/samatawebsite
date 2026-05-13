@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Menu, X } from 'lucide-react'
+import { Link } from 'react-router-dom'
 import logo from '../../assets/logo.png'
 
 export default function Navbar() {
@@ -19,7 +20,7 @@ export default function Navbar() {
         <div className="flex h-20 items-center justify-between">
 
           {/* Logo */}
-          <a href="/" className="group flex items-center gap-3">
+          <Link to="/" className="group flex items-center gap-3">
             <img
               src={logo}
               alt="Samata School Logo"
@@ -35,21 +36,20 @@ export default function Navbar() {
                 Lalitpur
               </span>
             </div>
-          </a>
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden items-center gap-8 md:flex">
             {navItems.map((item) => (
-              <a
+              <Link
                 key={item.href}
-                href={item.href}
+                to={item.href}
                 className="group relative text-[15px] font-semibold text-[#0047BA] transition-all duration-300 hover:text-[#FF3B3B]"
               >
                 {item.label}
 
-                {/* Gold underline */}
                 <span className="absolute -bottom-2 left-0 h-[2px] w-0 bg-[#D4AF37] transition-all duration-300 group-hover:w-full"></span>
-              </a>
+              </Link>
             ))}
           </div>
 
@@ -68,14 +68,14 @@ export default function Navbar() {
         {isOpen && (
           <div className="space-y-2 border-t border-gray-200 py-4 md:hidden">
             {navItems.map((item) => (
-              <a
+              <Link
                 key={item.href}
-                href={item.href}
+                to={item.href}
                 onClick={() => setIsOpen(false)}
                 className="block rounded-lg px-4 py-3 font-medium text-[#0047BA] transition duration-300 hover:bg-[#FFF8E7] hover:text-[#FF3B3B]"
               >
                 {item.label}
-              </a>
+              </Link>
             ))}
           </div>
         )}
