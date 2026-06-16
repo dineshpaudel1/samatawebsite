@@ -1,9 +1,9 @@
-import logo from '../../assets/logo.png'
+import logo from '../../assets/logo.webp'
 import { FaPhone, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa'
 
 function Footer() {
   return (
-    <footer className="border-t border-gray-200 bg-white">
+    <footer className="bg-white">
 
       <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
 

@@ -5,6 +5,7 @@ import Hero from '../sections/Hero'
 import WCU from '../sections/WCU'
 import Event from '../sections/Event'
 import Voice from '../sections/Voice'
+import Gallery from '../sections/Gallery'
 
 function Home() {
   return (
@@ -18,6 +19,7 @@ function Home() {
       <WCU/>
       <Event/>
       <Voice/>
+      <Gallery/>
     </MainLayout>
   )
 }

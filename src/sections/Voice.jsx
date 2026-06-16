@@ -1,28 +1,28 @@
 import { useState } from "react";
 import { X, Quote } from "lucide-react";
 
-import photo1 from "../assets/photo1.jpeg";
-import photo2 from "../assets/photo2.jpeg";
-import photo3 from "../assets/photo3.jpeg";
+import photo1 from "../assets/rksir.jpg";
+import photo2 from "../assets/sarojsir.jpg";
+import photo3 from "../assets/teachers.jpg";
 
 function Voice() {
   const [selectedVoice, setSelectedVoice] = useState(null);
 
   const voices = [
     {
-      title: "Parents",
+      title: "Principal",
       image: photo1,
       quote:
         "Samata School has given our child a wonderful learning environment. The teachers are caring and supportive. We are happy with the discipline and education system.",
     },
     {
-      title: "Teachers",
+      title: "Vice-Principals",
       image: photo2,
       quote:
         "Teaching at Samata School is a rewarding experience. Students are enthusiastic and eager to learn every day.",
     },
     {
-      title: "Principals",
+      title: "Teachers",
       image: photo3,
       quote:
         "Samata School played an important role in shaping my future. The memories, friendships, and lessons remain unforgettable.",
@@ -31,7 +31,6 @@ function Voice() {
 
   return (
     <>
-      {/* WHITE BACKGROUND SECTION */}
       <section className="relative overflow-hidden bg-white py-24">
 
         {/* Glow Effects */}
@@ -44,7 +43,7 @@ function Voice() {
             <div
               key={i}
               className="h-1.5 w-1.5 rounded-full bg-yellow-400"
-            ></div>
+            />
           ))}
         </div>
 
@@ -56,21 +55,21 @@ function Voice() {
               Testimonials
             </div>
 
-            <h2 className="text-4xl font-bold md:text-6xl">
+            <h2 className="text-3xl md:text-4xl lg:text-6xl font-bold">
               <span className="text-[#071B3B]">Valued</span>{" "}
               <span className="text-red-500">Voices</span>
             </h2>
 
             <div className="mx-auto mt-5 h-1 w-32 rounded-full bg-yellow-400"></div>
 
-            <p className="mx-auto mt-6 max-w-2xl text-gray-600">
+            <p className="mx-auto mt-6 max-w-2xl text-gray-600 text-sm md:text-base">
               Hear what parents, teachers and school leaders say about Samata
               Shiksha Niketan.
             </p>
           </div>
 
           {/* Cards */}
-          <div className="mt-20 grid gap-10 md:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-20 grid gap-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
             {voices.map((voice, index) => (
               <div
                 key={index}
@@ -87,7 +86,7 @@ function Voice() {
                 <img
                   src={voice.image}
                   alt={voice.title}
-                  className="h-[500px] w-full object-cover transition duration-500 group-hover:scale-110"
+                  className="h-[320px] md:h-[500px] w-full object-cover transition duration-500 group-hover:scale-110"
                 />
 
                 {/* Overlay */}
@@ -97,7 +96,7 @@ function Voice() {
                 <div className="absolute bottom-6 left-6">
                   <Quote className="mb-3 text-yellow-400" size={28} />
 
-                  <h3 className="text-3xl font-bold uppercase text-white">
+                  <h3 className="text-2xl md:text-3xl font-bold uppercase text-white">
                     {voice.title}
                   </h3>
                 </div>
@@ -107,43 +106,43 @@ function Voice() {
         </div>
       </section>
 
-      {/* Modal (same as before) */}
+      {/* Modal */}
       {selectedVoice && (
-        <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/80 p-6 backdrop-blur-md">
+        <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/80 p-4 md:p-6 backdrop-blur-md">
 
           <div className="relative w-full max-w-5xl overflow-hidden rounded-[35px] border border-yellow-400/30 bg-[#071B3B] shadow-[0_0_40px_rgba(212,175,55,0.2)]">
 
             {/* Close Button */}
             <button
               onClick={() => setSelectedVoice(null)}
-              className="absolute right-5 top-5 z-20 rounded-full bg-red-500 p-3 text-white hover:scale-110"
+              className="absolute right-4 top-4 md:right-5 md:top-5 z-20 rounded-full bg-red-500 p-2 md:p-3 text-white hover:scale-110"
             >
               <X size={22} />
             </button>
 
-            <div className="grid md:grid-cols-2">
+            <div className="grid grid-cols-1 md:grid-cols-2">
               
               {/* Image */}
               <img
                 src={selectedVoice.image}
                 alt={selectedVoice.title}
-                className="h-full min-h-[500px] w-full object-cover"
+                className="h-[300px] md:h-full w-full object-cover"
               />
 
               {/* Content */}
-              <div className="flex items-center p-10 md:p-14">
+              <div className="flex items-center p-6 md:p-10 lg:p-14">
                 <div>
                   <div className="mb-5 inline-flex rounded-full border border-yellow-400 px-4 py-2 text-sm font-semibold text-yellow-400">
                     Samata School Voice
                   </div>
 
-                  <h2 className="text-4xl font-bold text-white">
+                  <h2 className="text-2xl md:text-4xl font-bold text-white">
                     {selectedVoice.title}
                   </h2>
 
                   <div className="mt-4 h-1 w-24 bg-yellow-400"></div>
 
-                  <p className="mt-8 text-lg leading-9 text-gray-300">
+                  <p className="mt-6 md:mt-8 text-base md:text-lg leading-7 md:leading-9 text-gray-300">
                     {selectedVoice.quote}
                   </p>
                 </div>

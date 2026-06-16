@@ -1,6 +1,6 @@
 import cover from "../assets/cover2.jpg";
-import photo1 from "../assets/photo1.jpeg";
-import photo2 from "../assets/photo2.jpeg";
+import photo1 from "../assets/photoi.jpg";
+import photo2 from "../assets/cover1.jpg";
 
 import {
   GraduationCap,
@@ -99,7 +99,7 @@ function Hero() {
               <img
                 src={photo1}
                 alt="Students"
-                className="h-[450px] w-[340px] rounded-[20px] object-cover"
+                className="h-[350px] w-[550px] rounded-[20px] object-cover"
               />
             </div>
 
@@ -108,7 +108,7 @@ function Hero() {
               <img
                 src={photo2}
                 alt="School"
-                className="h-[300px] w-[260px] rounded-[18px] object-cover"
+                className="h-[250px] w-[500px] rounded-[18px] object-cover"
               />
             </div>
 
